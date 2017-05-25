@@ -9,7 +9,7 @@
   <context-param>
         <!-- 指定Spring上下文配置文件 -->
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:spring-context.xml</param-value>
+        <param-value>classpath*:spring-mybatis.xml</param-value>
     </context-param>
   
   
@@ -39,6 +39,12 @@
         <servlet-name>Dispatcher</servlet-name>
         <url-pattern>*.html</url-pattern>
     </servlet-mapping>
+    <!-- 默认放行不拦截 -->
+      <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/adminlte/*</url-pattern>
+    </servlet-mapping>
+
 <!-- 
 <servlet>  
     <description>spring mvc servlet</description>  

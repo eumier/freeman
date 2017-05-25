@@ -18,8 +18,8 @@ import com.eumier.service.DemoService;
 @Controller("Demo")
 public class DemoController {
 
-	@Autowired
-	DemoService  demoService;
+/*	@Autowired
+	DemoService  demoService;*/
 	
 	@PostMapping("/DemoInsert")
 	public ModelAndView DemoInsert(String username ,String password){
@@ -29,7 +29,7 @@ public class DemoController {
 		params.put("username", "admin");
 		params.put("password", "gotoapp");
 		
-		demoService.demoInsert(params);
+	/*	demoService.demoInsert(params);*/
 		
 		return  new ModelAndView("index");
 	}
@@ -42,8 +42,8 @@ public class DemoController {
 		
 		params.put("username", "admin");
 		params.put("password", "gotoapp");
-		
-		demoService.demoInsert(params);
+		/*
+		demoService.demoInsert(params);*/
 		
 		return null;
 	}
